@@ -1,0 +1,360 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        .first{
+            background-color: red;
+            color: black;
+        }
+        .second{
+            background-color: green;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1 class="first">This is a heading.</h1>
+         <p class="second">This is a paragraph.</p>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first img{
+            border: 2px solid red;
+        }
+
+        img{
+            width: 150px;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <a href="">Create a link of the image</a>
+        <img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+
+    <div id="second">
+        <a href="">Still a link but without the box.</a>
+       <img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+
+    <div id="third">
+        <a href="">This the third image.</a>
+        <img src="../html-css projects/box4_image.jpg"></img>
+    </div>
+</body>
+</html-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid black;
+        }
+        tr{
+            border: 2px solid black;
+        }
+        th{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p>One column:</p>
+    <table>
+        <th>100</th>
+    </table>
+
+    <p>One row and three columns:</p>
+    <table>
+        <th>100</th>
+        <th>200</th>
+        <th>300</th>
+    </table>
+
+    <p>Two rows and three columns:</p>
+    <table>
+        <th>100</th>
+        <th>200</th>
+        <th>300</th>
+    </table>
+
+    <table>
+        <th>400</th>
+        <th>500</th>
+        <th>600</th>
+    </table>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td, th{border: 10px inset black;
+    background-color: violet;
+    border-collapse: collapse;
+    font-size: larger;
+    }
+
+    </style>
+<body>
+    <table>
+        <tr><th>Table data</th><th rowspan="2">Table data</th><th colspan="2">Table data</th></tr>
+        <tr><td>Table data</td><td>Table data</td><td>Table data</td></tr>
+        <tr><td>Table data</td><td>Table data</td><td colspan="2">Table data</td></tr>
+    </table>
+
+<ol type="a">
+    <li>Hello</li>
+    <li>Hey</li>
+    <li>Hola</li>
+</ol>
+<ol>
+<li>Hello</li>
+    <li>Hey</li>
+    <li>Hola</li>
+</ol>
+<ol type="i">
+    <li>Hello</li>
+    <li>Hey</li>
+    <li>Hola</li>
+</ol>
+<ul type="square">
+    <li>Hello</li>
+    <li>Hey</li>
+    <li>Hola</li>
+</ul>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr{
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        *{
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .container{
+            border: 3px dotted black;
+        }
+
+        .form{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table>
+        <tr>
+            <th rowspan="2">A</th>
+            <th>B</th>
+            <th>D</th>
+            <th>F</th>
+        </tr>
+        <tr>
+            <th>C</th>
+            <th>E</th>
+            <th>G</th>
+        </tr>
+    </table>
+
+    <div class="form">
+    <form action="backend.php">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id=""><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="name" id=""><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="myEmail" id=""><br>
+
+        <label for="gender">Select your gender:</label>
+        <select name="" id="">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option></select><br>
+
+        <label for="pass">Password:</label>
+        <input type="password" name="myPassword" id=""><br>
+
+        <label for="eligibility">Check your elegibility:</label>
+        Above 18<input type="radio" name="myGender" id="">
+        Under 18<input type="radio" name="myGender" id=""><br>
+
+        <label for="hobbies">Hobbies:</label><br>
+        <input type="checkbox" name="swimming" id="">
+        <label for="hobbies">Swimming</label><br>
+        <input type="checkbox" name="badminton" id="">
+        <label for="hobbies">Badminton </label><br>
+        <input type="checkbox" name="cricket" id="">
+        <label for="hobbies">Cricket</label><br>
+    </form>
+</div>
+
+    <p>Lists:</p>
+    <ol type="i">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>
+</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        .odd {
+            background-color: white;
+            height: 50px;
+            width: 50px;
+        }
+
+        .even {
+            background-color: black;
+            height: 50px;
+            width: 50px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        .container {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+        </div>
+        <div class="box">
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+        </div>
+        <div class="box">
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+        </div>
+        <div class="box">
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+        </div>
+
+        <div class="box">
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+        </div>
+        <div class="box">
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+        </div>
+
+        <div class="box">
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+        </div>
+        <div class="box">
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+            <div class="even"></div>
+            <div class="odd"></div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: indianred;
+        }
+        .heading1{
+            background-color: yellow;
+        }
+        button{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading1">DOM Demo - 1</h1>
+    <h1 class="heading1">Javascript</h1>
+    <h3 class="heading1">Topic-1: starter code.</h3>
+    <p>Lets learn about DOM in detail.</p>
+    <button>Click Me</button>
+    <script>
+        console.log("hello");
+        // alert("Hi Kanishka");
+        console.log(window);
+        window.console.log("hello2");
+        // window.alert("hello");
+        console.log(document.body);
+        console.dir(document.body.childNodes);
+        console.dir(document.body.childNodes[1]);
+        let heading = document.getElementsByClassName("heading1");
+        console.log(heading);
+        console.dir(heading);
+    </script>
+</body>
+</html> -->
+
+<!-- QUESTION 1 :-Create 3 divs with common class name "box".Access them and add some unique text to each. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>This is a practice problem.</h1>
+    <div class="box">Hi</div>
+    <div class="box">Hi</div>
+    <div class="box">Hi</div>
+    
+    <script>
+         let divs = document.querySelectorAll(".box");
+        //  console.log("divs");
+        divs[0].innerText = "Kanishka";
+        divs[1].innerText = "There";
+        divs[2].innerText = "World";
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION 2: Create a new button element. Give a text "click me", background colour of red and text color of white.
+Insert the button as the first element inside the body tag. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is question 2.</h1>
+    <p>The answer begains here.</p>
+    <script>
+      let newBtn = document.createElement("Button");
+      newBtn.innerText="Click Me";
+      newBtn.style.color = "white";
+      newBtn.style.backgroundColor = "red";
+      document.querySelector("body").prepend(newBtn);
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION 3: Create a <p> tag in html, give it a class and some styling.Now create a new class in css and try to append this class to the <p> element.Solve this problem using classList. -->
+
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .one{
+                color: red;
+            }
+
+            .newClass{
+                color: red;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="one">This is a paragraph.</p>
+        <script>
+            let para = document.querySelector("p");
+            para.classList.remove("one");
+            para.classList.add("newClass");
+        </script>
+    </body>
+    </html> -->
+
+
+
+<!-- ALL ABOUT .getElementById, .getElementByClassName, .getElementByTagName, .querySelector, .querySelectorAll -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Selectors</title>
+</head>
+<body>
+  <h1 id="title">Hello, DOM!</h1>
+  <p class="paragraph">This is a paragraph.</p>
+  <p class="paragraph">This is another paragraph.</p>
+  <button id="btn">Click Me</button>
+
+  <script>
+    // Using getElementById
+    const title = document.getElementById('title');
+    console.log('getElementById:', title);
+
+    // Using getElementsByClassName
+    const paragraphs = document.getElementsByClassName('paragraph');
+    console.log('getElementsByClassName:', paragraphs);
+
+    // Using getElementsByTagName
+    const buttons = document.getElementsByTagName('button');
+    console.log('getElementsByTagName:', buttons);
+
+    // Using querySelector
+    const firstParagraph = document.querySelector('.paragraph');
+    console.log('querySelector:', firstParagraph);
+
+    // Using querySelectorAll
+    const allParagraphs = document.querySelectorAll('.paragraph');
+    console.log('querySelectorAll:', allParagraphs);
+  </script>
+</body>
+</html> -->
+
+
+<!-- ALL ABOUT .createElement(''), .textContent, .appendChild
+ createElement: Creates a new element.
+ appendChild: Adds a child element to a parent element.
+ textContent: Modifies the text inside an element. -->
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+   const container = document.getElementById('container');
+   const newPara = document.createElement('p');
+   newPara.textContent = 'Hi there this is a new para.';
+   container.appendChild(newPara);
+  </script>
+</body>
+</html> -->
+
+
+<!-- All about .getAttribute, .setAttribute, .removeAttribute
+ setAttribute: Sets an attribute on an element.
+ getAttribute: Gets the value of an attribute.
+ removeAttribute: Removes an attribute. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modify Attributes</title>
+</head>
+<body>
+  <img id="image" src="http://codinggita.com/placeholder.jpg" alt="Placeholder" />
+
+  <script>
+    const img = document.getElementById('image');
+
+    // Get the src attribute
+    console.log('Original src:', img.getAttribute('src'));
+
+    // Modify the src attribute
+    img.setAttribute('src', 'http://codinggita.com/new-image.jpg');
+    console.log('Updated src:', img.getAttribute('src'));
+
+    // Remove the alt attribute
+    img.removeAttribute('alt');
+    console.log('Alt attribute removed.');
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- Changing the text of the line using .textContent and buttons. -->
+
+<!-- METHOD1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Content</title>
+</head>
+<body>
+  <h1 id="main-title">Welcome</h1>
+
+  <h1 class="main-title">GoodBye</h1>
+
+  <script>
+    const title = document.getElementsByClassName('main-title');
+    console.log(title);
+    title[0].textContent = 'Text Changed!';
+
+    const title1 = document.getElementById('main-title');
+    console.log(title1); 
+  </script>
+</body>
+</html> -->
+
+<!-- METHOD2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Content</title>
+</head>
+<body>
+  <h1 id="main-title">Welcome</h1>
+  <button id="changeBtn">Change Text</button>
+
+  <script>
+    const title = document.getElementById('main-title');
+    const button = document.getElementById('changeBtn');
+
+    button.addEventListener('click', () => {
+      title.textContent = 'Text Changed!';
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- Changing the style of the text using .addEventListener and .style . -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Style</title>
+</head>
+<body>
+  <p id="text">Click the button to change my style!</p>
+  <button id="styleBtn">Change Style</button>
+
+  <script>
+const text = document.getElementById('text');
+const button = document.getElementById('styleBtn');
+
+button.addEventListener('click', () =>{
+    text.style.color = 'purple';
+    text.style.fontSize = '20px';
+    text.style.fontWeight = '500';
+});
+  </script>
+</body>
+</html> -->
+
+
+<!-- On clicking the button get a new list element using.createElement('li') and .appendChild(). -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add List Items</title>
+</head>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button id="btn">Add Item</button>
+
+  <script>
+    const list = document.getElementById('list');
+    const button = document.getElementById('btn');
+
+    button.addEventListener('click', () => {
+     const newItem = document.createElement('li');
+     newItem.textContent = `Item ${list.children.length +1}`;
+     list.appendChild(newItem);
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!-- Give the p tag and button tag class and on reload of the page change the text in the p tags. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Content</title>
+</head>
+<body>
+ <p class="para">p1</p>
+ <p class="para">p2</p>
+ <p class="para">p3</p>
+
+  <script>
+    const text = document.getElementsByClassName('para');
+    text[0].textContent = 'p11';
+    text[1].textContent = 'p22';
+    text[2].textContent = 'p33';
+  </script>
+</body>
+</html> -->
+
+
+<!-- Give the p tag and button tag class and on clicking change the text in the p tags. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Content</title>
+</head>
+<body>
+ <p class="para">p1</p>
+ <p class="para">p2</p>
+ <p class="para">p3</p>
+
+ <button class="btn">Click Here</button>
+
+  <script>
+    const text = document.getElementsByClassName('para');
+    const button = document.getElementsByClassName('btn');
+    
+    button[0].addEventListener('click', () =>{
+        text[0].textContent = 'p11';
+        text[1].textContent = 'p22';
+        text[2].textContent = 'p33';
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: ON CLICKING THERE SHOULD BE A POP UP OF THE NOTIFICATION BOX. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Box</title>
+</head>
+<body>
+  <button id="notifyBtn">Show Notification</button>
+  <div id="container"></div>
+
+  <script>
+  const container = document.getElementById('container');
+  const button = document.getElementById('notifyBtn');
+
+  button.addEventListener('click', () =>{
+    const notification = document.createElement('div');
+    notification.textContent = 'This is a customized notification box.';
+    notification.style.border = '2px solid red';
+    notification.style.fontSize = '20px';
+    notification.style.padding = '5px';
+    notification.style.margin = '10px';
+    container.appendChild(notification);
+  });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: THERE SHOULD BE A TABLE PRINTED WITH THE USE OF DOM AND NO HTML. -->
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+     table,th,td{
+        border: 2px solid black;
+        padding: 5px;
+     }
+
+     table{
+        border-collapse: collapse;
+     }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+   const container = document.getElementById('container');
+   container.innerHTML = 
+   `<table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+
+      <tr>
+        <td>Kanishka</th>
+        <td>xyz@gmail.com</th>
+      </tr>
+    </table>`;
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: REMOVE THE PARAGRAPH USING .remove() ELEMENT.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element</title>
+</head>
+<body>
+    <p id="para">This is a paragraph to check weather the method removes the para or not.</p>
+    <button id="btn">Remove Para</button>
+
+    <script>
+        const paragraph = document.getElementById('para');
+        const button = document.getElementById('btn');
+
+        button.addEventListener('click', ()=>{
+            paragraph.remove();
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: REPLACE THE TEXT IN THE HEADING. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Replace Element</title>
+</head>
+<body>
+  <h1 id="header">Old Header</h1>
+  <button id="replaceBtn">Replace Header</button>
+
+  <script>
+    const header = document.getElementById('header');
+    const button = document.getElementById('replaceBtn');
+
+    button.addEventListener('click', ()=>{
+        header.textContent = 'New text replaced.'
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: CLONING AN ELEMENT USING .cloneNode(true) ELEMENT.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone Nodes</title>
+</head>
+<body>
+  <ul id="list">
+    <li id="item">Item 1</li>
+  </ul>
+  <button id="cloneBtn">Duplicate Item</button>
+
+  <script>
+  const list = document.getElementById('list');
+  const item = document.getElementById('item');
+  const button = document.getElementById('cloneBtn');
+
+  button.addEventListener('click', ()=>{
+    const clone = item.cloneNode(true);
+    list.appendChild(clone);
+  });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: APPENDING MULTIPLE ITEMS USING FOR LOOP IN .addEventListeners.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Append Multiple Elements</title>
+</head>
+<body>
+  <ul id="list"></ul>
+  <button id="btn">Add Items</button>
+
+  <script>
+ const list = document.getElementById('list');
+ const button = document.getElementById('btn');
+
+ button.addEventListener('click', ()=>{
+    for(let i = 1; i<5; i++){
+        const items = document.createElement('li');
+        items.textContent = `Item ${i}`;
+        list.appendChild(items);
+    }
+ });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: CHANGE THE TEXT OF THE BUTTONS CONDITIONALLY.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Text Update</title>
+</head>
+<body>
+ <button id ="btn">Change Text</button>
+ <script>
+    const button = document.getElementById('btn');
+    button.addEventListener('click', ()=>{
+        if(button.textContent==='Change Text'){
+            button.textContent = 'Text Changed';
+        }else{
+            button.textContent = 'Change Text';
+        }
+    });
+ </script>
+</body>
+</html> -->
+
+
+
+<!-- QUESTION: cHANGING AND MODIFYING THE ATTRIBUTES USING .setAttribute ELEMENT.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modify Attributes</title>
+</head>
+<body>
+  <button id="btn">Click Me</button>
+  <script>
+   const button = document.getElementById('btn');
+   button.addEventListener('click', () =>{
+    button.setAttribute('disabled', true);
+    button.textContent = 'Button Disabled';
+   });
+  </script>
+</body>
+</html> -->
